@@ -73,13 +73,13 @@ function mapdata() {
       }
 
     }
-  }
-  matrix(4)
+  
+  
   // console.log(edges.length);
 
-  for (i = 0; i < 4; i++) {
-    for (j = 0; j < 4; j++) {
-      if ((j >= i) && (j < 3)) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      if ((j >= i) && (j < (n-1)) {
         obj = {
           data: {
             id: i + '-' + j + 'D',
@@ -92,9 +92,9 @@ function mapdata() {
     }
   }
 
-  for (i = 0; i < 4; i++) {
-    for (j = 0; j < 4; j++) {
-      if ((i > j) && (i < 3)) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      if ((i > j) && (i < (n-1)) {
         obj = {
           data: {
             id: i + '-' + j + 'D',
@@ -107,9 +107,9 @@ function mapdata() {
     }
   }
 
-  for (i = 0; i < 4; i++) {
-    for (j = 0; j < 4; j++) {
-      if ((i < 3) && (j > 0)) {
+  for (i = 0; i < n; i++) {
+    for (j = 0; j < n; j++) {
+      if ((i < (n-1) && (j > 0)) {
         obj = {
           data: {
             id: i + '-' + j + 'C',
@@ -121,7 +121,8 @@ function mapdata() {
       }
     }
   }
-
+  }
+matrix(4)
   // for (i = 0; i < 4; i++) {
   //   for (j = 0; j < 4; j++) {
   //     if ((i >= j) && (0<j<3)) {
