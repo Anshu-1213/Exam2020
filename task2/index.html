@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let sport =[];
+        let arr = [{
+            Name: "Ravindra",
+            Sports: ["Chess", "Cricket"]
+        }, {
+            Name: "Ravi",
+            Sports: ["Cricket", "Football","Hockey"]
+        }, {
+            Name: "Rishabh",
+            Sports: ["Table-Tennis", "Cricket"]
+        }]
+
+        // for(var i = 0; i < arr.length; i++) {
+        //     if(arr[i].Sports == "Chess") {
+        //         sport.push(arr[i].Name);
+        //         console.log(sport);
+        //     }
+        //     else if(arr[i].Sports == "Cricket") {
+        //         sport.push(arr[i].Name);
+        //         console.log(sport);
+        //     }
+        //     else if(arr[i].Sports == "Football") {
+        //         sport.push(arr[i].Name);
+        //         console.log(sport);
+        //     }
+        //     else if(arr[i].Sports == "Table-tennis") {
+        //         sport.push(arr[i].Name);
+        //         console.log(sport);
+        //     }
+        // }
+        
+        let sport = new Map();
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].Sports.length; j++) {
+                if (sport.has(arr[i].Sports[j])) {
+                    sport.get(arr[i].Sports[j]).push(arr[i].Name);
+                    
+                }
+                else {
+                    sport.set(arr[i].Sports[j],[arr[i].Name ]);
+               }
+            } }
+            for(let i of sport) {
+                console.log(JSON.stringify(i));
+            }
+            
+            
+        
+
+
+    </script>
+</body>
+
+</html>
